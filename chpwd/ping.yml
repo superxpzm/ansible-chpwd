@@ -1,0 +1,9 @@
+---
+- name: Linux Client SSH Check 
+  hosts: linux
+  remote_user: mzc1
+  gather_facts: no
+
+  tasks:
+  - name: SSH Check
+    ping:

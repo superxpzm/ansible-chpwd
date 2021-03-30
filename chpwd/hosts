@@ -1,0 +1,14 @@
+[all:children]
+linux
+windows
+
+[linux]
+client1            ansible_host=10.0.11.159 end_ip=159
+client2            ansible_host=10.0.11.72 end_ip=72
+client3            ansible_host=10.0.11.223 end_ip=223
+
+[windows]
+windows1           ansible_host=172.31.0.31 end_ip=31
+windows2           ansible_host=172.31.0.44 end_ip=44
+windows3           ansible_host=172.31.0.47 end_ip=47
+

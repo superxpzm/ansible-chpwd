@@ -1,0 +1,21 @@
+---
+- hosts: linux
+
+  vars_prompt:
+    - name: "password"
+      prompt: "Enter Password"
+      private: yes
+      confirm: yes
+
+    - name: "root_password"
+      prompt: "Enter Root Password"
+      private: yes
+      confirm: yes
+
+    - name: "new_password"
+      prompt: "Enter New Password"
+      private: yes
+      confirm: yes
+
+  roles:
+    - linux

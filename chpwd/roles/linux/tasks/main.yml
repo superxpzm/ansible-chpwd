@@ -1,0 +1,12 @@
+---
+- name: Change password of existing mzc1
+  user: 
+    name: mzc1 
+    update_password: always 
+    password: "{{ ansible_ssh_new_pass | password_hash('sha512')}}"
+
+- name: Change password of existing mzc2
+  user: 
+    name: mzc2 
+    update_password: always 
+    password: "{{ ansible_ssh_new_pass | password_hash('sha512')}}"

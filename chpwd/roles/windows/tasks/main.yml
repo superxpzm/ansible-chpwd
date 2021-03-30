@@ -1,0 +1,8 @@
+---
+- name: Change password of existing cdn
+  #win_user: name="cdn" update_password=always password="{{ ansible_new_password | password_hash('sha512')}}"
+  #win_user: name="cdn2" update_password=always password="{{ ansible_new_password | password_hash('sha512')}}"
+  win_user: name="cdn" update_password=always password="{{ ansible_new_password }}"
+
+- name: Change password of existing cdn2
+  win_user: name="cdn2" update_password=always password="{{ ansible_new_password }}"

@@ -1,0 +1,16 @@
+---
+- hosts: windows
+
+  vars_prompt:
+    - name: "password"
+      prompt: "Enter Administrator Password"
+      private: yes
+      confirm: yes
+ 
+    - name: "new_password"
+      prompt: "Enter New Password"
+      private: yes
+      confirm: yes
+
+  roles:
+    - windows

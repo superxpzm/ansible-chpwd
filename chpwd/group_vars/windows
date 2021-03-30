@@ -1,0 +1,9 @@
+---
+ansible_python_interpreter: /usr/bin/python
+ansible_user: administrator
+ansible_password: "{{ password }}"
+ansible_new_password: "{{ new_password }}{{ end_ip }}"
+ansible_connection: winrm
+ansible_port: 5985
+ansible_winrm_transport: ntlm
+ansible_winrm_server_cert_validation: ignore
