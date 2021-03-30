@@ -1,5 +1,5 @@
 ---
-ansible_ssh_user: mzc1
+ansible_ssh_user: test1 
 ansible_ssh_pass: "{{ password }}{{ end_ip }}" 
 ansible_ssh_new_pass: "{{ new_password }}{{ end_ip }}" 
 ansible_ssh_port: 22
