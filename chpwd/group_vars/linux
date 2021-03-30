@@ -1,10 +1,10 @@
 ---
-ansible_ssh_user: test1 
+ansible_ssh_user: test1
 ansible_ssh_pass: "{{ password }}{{ end_ip }}" 
 ansible_ssh_new_pass: "{{ new_password }}{{ end_ip }}" 
 ansible_ssh_port: 22
-ansible_become: yes
-ansible_become_method: su
-ansible_become_user: root
-ansible_become_pass: "{{ root_password }}{{ end_ip }}" 
+#ansible_become: yes
+#ansible_become_method: su
+#ansible_become_user: root
+#ansible_become_pass: "{{ root_password }}{{ end_ip }}" 
 

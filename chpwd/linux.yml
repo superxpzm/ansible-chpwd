@@ -1,5 +1,10 @@
 ---
 - hosts: linux
+  vars:
+   ansible_become: yes
+   ansible_become_method: su
+   ansible_become_user: root
+   ansible_become_pass: "{{ root_password }}{{ end_ip }}"
 
   vars_prompt:
     - name: "password"

@@ -2,10 +2,13 @@
 linux
 windows
 
+[ping:children]
+linux
+
 [linux]
-client1            ansible_host=10.0.11.159 end_ip=159
-client2            ansible_host=10.0.11.72 end_ip=72
-client3            ansible_host=10.0.11.223 end_ip=223
+linux1            ansible_host=10.0.11.159 end_ip=159
+linux2            ansible_host=10.0.11.72  end_ip=72
+linux3            ansible_host=10.0.11.223 end_ip=223
 
 [windows]
 windows1           ansible_host=172.31.0.31 end_ip=31

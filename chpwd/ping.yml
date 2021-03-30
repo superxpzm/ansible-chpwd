@@ -1,8 +1,13 @@
 ---
 - name: Linux Client SSH Check 
   hosts: linux
-  remote_user: test1 
   gather_facts: no
+
+  vars_prompt:
+    - name: "password"
+      prompt: "Enter Password"
+      private: yes
+      confirm: yes
 
   tasks:
   - name: SSH Check
