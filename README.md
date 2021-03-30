@@ -61,14 +61,14 @@
  해당 Git Repo에 소스를 다운받는다.
 
 ```
-[ec2-user@master ~]$ git clone https://github.com/superxpzm/ansible
+[ec2-user@master ~]$ git clone https://github.com/superxpzm/ansible-chpwd
 ```
 
  chpwd 경로로 이동한다.
 
 ```
-[ec2-user@master ~]$ cd ansible/chpwd
-[ec2-user@master chpwd]$ tree
+[ec2-user@master ~]$ cd ansible-chpwd
+[ec2-user@master ansible-chpwd]$ tree
 .
 ├── README.md
 ├── ansible.cfg
@@ -121,7 +121,7 @@ windows3           ansible_host=172.31.0.47 end_ip=47
 * 수정 항목: ansible_ssh_user
 
 ```
-[ec2-user@master chpwd]$ cat group_vars/linux
+[ec2-user@master ansible-chpwd]$ cat group_vars/linux
 ---
 ansible_ssh_user: test1
 ansible_ssh_pass: "{{ password }}{{ end_ip }}"
@@ -153,7 +153,7 @@ ansible_ssh_port: 22
  패스워드를 입력할때 IP 끝자리를 제외한 패스워드에 키워드(1BBaGGeu#@1)만 입력한다. 접속이 실패한다면 아래와 같이 접근이 불가한 호스트를 확인 할 수 있다.
  
 ```
-[ec2-user@master chpwd]$ ansible-playbook ping.yml
+[ec2-user@master ansible-chpwd]$ ansible-playbook ping.yml
 Enter Password:
 confirm Enter Password:
 
@@ -181,7 +181,7 @@ linux3                     : ok=0    changed=0    unreachable=1    failed=0    s
  플레이북을 실행하면 아래와 같이 진행 상황과 결과를 확인 할 수 있다.
 
 ```
-[ec2-user@master chpwd]$ ansible-playbook linux.yml
+[ec2-user@master ansible-chpwd]$ ansible-playbook linux.yml
 Enter Password:
 confirm Enter Password:
 Enter Root Password:
